@@ -9,13 +9,20 @@ $filtered = [
 
 $sql = "
 DELETE FROM topic
+WHERE author_id = {$filtered['id']}
+";
+mysqli_query($conn, $sql);
+
+$sql = "
+DELETE FROM author
 WHERE id = {$filtered['id']}
 ";
+mysqli_query($conn, $sql);
 
 $result = mysqli_query($conn, $sql);
 if ($result === false) {
-    echo '저장하는 과정에서 문제가 생겼습니다.';
+    echo '삭제하는 과정에서 문제가 생겼습니다.';
     error_log(mysqli_error($conn));
 } else {
-    echo '삭제에 성공했습니다. <a href="index.php">돌아가기</a>';
+    header('Location: author.php');
 }
