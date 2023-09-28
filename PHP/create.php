@@ -35,7 +35,6 @@ $delete_link = '
 ';
 }
 ?>
-
 <html>
 <head>
 <meta charset="utf-8">

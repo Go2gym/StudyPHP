@@ -1,0 +1,12 @@
+sudo service mysql start
+
+포트 킨 채로 sql커넥트하지 말고 그냥 커넥트 하고 포트 열기
+
+https://blog.naver.com/islove8587/221970366883
+
+
+./mysql -uroot -p -hlocalhost
+
+
+mysql log 
+mysql genaral_log enable
